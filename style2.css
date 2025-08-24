@@ -1,0 +1,278 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reset dasar */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Variabel warna */
+:root {
+  --primary: #000000;
+  --accent: #e74c3c;
+  --bg: #ffffff;
+  --text: #333;
+}
+
+/* Global */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Header */
+.site-header {
+  background: var(--primary);
+  padding: 1rem 0;
+  /* Tambahkan animasi transisi gulir ke bawah saat reload */
+  transform: translateY(-50px);
+  opacity: 0;
+  animation: hero-slide-down 1s ease-out forwards;
+  }
+
+  @keyframes hero-slide-down {
+  to {
+  transform: translateY(0);
+  opacity: 1;
+  }
+} 
+
+.nav-menu {
+  float: right;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--accent);
+}
+
+.nav-menu a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Hero */
+.hero {
+  background-image: url('ELEMEN/computering\ bg.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(80%);
+  padding: 4rem 0;
+  text-align: center;
+  /* Tambahkan animasi transisi gulir ke bawah saat reload */
+  transform: translateY(-50px);
+  opacity: 0;
+  animation: hero-slide-down 1.1s ease-out forwards;
+  }
+
+  @keyframes hero-slide-down {
+  to {
+  transform: translateY(0);
+  opacity: 1;
+  }
+}
+
+.hero-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;;
+  color: rgb(0, 0, 0);
+  text-shadow: 2px 2px 4px rgb(255, 255, 255);
+  background-color: #9e9d9d50;
+  border-radius: 7px;
+}
+
+.hero-desc {
+  margin-top: 1rem;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+  text-shadow: 5px 5px 2px rgb(255, 255, 255);
+}
+
+/* Section Pencapaian */
+.achievements {
+  padding: 3rem 0;
+}
+
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary);
+    transform: translateY(40px) scale(0.9);
+  animation: popop 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  }
+
+  @keyframes popop {
+  to {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 7px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(40px) scale(0.9);
+  animation: popop 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  }
+
+  @keyframes popop {
+  to {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  }
+
+}
+
+.card1 {
+  background: #8C1007;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 7px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(40px) scale(0.9);
+  animation: popop 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  }
+
+  @keyframes popop {
+  to {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  }
+
+}
+
+.card-title1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+.card-date1 {
+  display: block;
+  margin: 0.5rem 0;
+  font-size: 0.875rem;
+  color: #fff;
+}
+
+.card-desc1 {
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+
+.card-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  color: var(--accent);
+}
+
+.card-date {
+  display: block;
+  margin: 0.5rem 0;
+  font-size: 0.875rem;
+  color: var(--primary);
+}
+
+.card-desc {
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.card-image {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 12px;
+  border: solid 2px white;
+  border-radius: 8px;
+}
+
+.card-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.card-image1 {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 12px;
+  border: solid 2px rgb(0, 0, 0);
+  border-radius: 8px;
+}
+
+.card-image1 img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.card-image2 {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 12px;
+  border: solid 2px rgb(0, 0, 0);
+  border-radius: 8px;
+}
+
+.card-image2 img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+
+
+/* Footer */
+.site-footer {
+  background: var(--primary);
+  color: #fff;
+  text-align: center;
+  padding: 4rem 0;
+  margin-top: 3rem;
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+  .nav-menu {
+    float: none;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .logo {
+    display: block;
+    text-align: center;
+  }
+}

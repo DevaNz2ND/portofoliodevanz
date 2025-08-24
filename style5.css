@@ -1,0 +1,103 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Reset & dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: slategray;
+  line-height: 1.4;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Container utama */
+.container {
+  max-width: 500px;
+  margin: 100px auto;
+  padding: 2rem;
+  background-color: rgba(37, 34, 34, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Judul */
+header h1 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
+/* Daftar sosial */
+.social-list {
+  list-style: none;
+}
+
+.social-list li + li {
+  margin-top: 0.8rem;
+}
+
+/* Link gaya tombol */
+.social-list a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 0.8rem 1.2rem;
+  border-radius: 6px;
+  transition: transform 0.2s, filter 0.2s;
+}
+
+/* Ikon & teks */
+.social-list .icon {
+  font-size: 1.4rem;
+  margin-right: 0.6rem;
+}
+
+.social-list .text {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Warna khas tiap platform */
+.instagram { background: #f5b56d; }
+.twitter   { background: #837f7d; }
+.facebook  { background: #1877F2; }
+.linkedin  { background: #532f61; }
+.youtube   { background: #FF0000; }
+
+/* Hover effect */
+.social-list a:hover {
+  filter: brightness(0.9);
+  transform: translateY(-2px);
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 360px) {
+  .container {
+    margin: 20px;
+    padding: 1.5rem;
+  }
+
+  .social-list a {
+    padding: 0.6rem 1rem;
+  }
+
+  .social-list .text {
+    font-size: 0.94rem;
+  }
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 0.6rem;
+}

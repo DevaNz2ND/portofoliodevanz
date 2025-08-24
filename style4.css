@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reset sederhana */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container1 {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: rgba(51, 51, 51, 0.8);
+  border-radius: 8px;
+  color: rgb(255, 255, 255);
+  font-family: 'Montserrat', sans-serif;
+  transform: translateY(40px) scale(0.9);
+  animation: popupall 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  }
+
+  @keyframes popupall {
+  from {
+  opacity: 0;
+  transform: translateY(-20px) scale(0.95);
+  }
+  to {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  }
+
+}
+
+.container {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+/* Header & Nav */
+header {
+  background-color: rgba(22, 22, 22, 0.89);
+  /* Tambahkan animasi transisi gulir ke bawah saat reload */
+  transform: translateY(-50px);
+  opacity: 0;
+  animation: hero-slide-down 1s ease-out forwards;
+  }
+
+  @keyframes hero-slide-down {
+  to {
+  transform: translateY(0);
+  opacity: 1;
+  }
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li + li {
+  margin-left: 1rem;
+}
+
+nav a {
+  color: #fcfcfc;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background-color: #5f5f5f;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('ELEMEN/computering bg.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(80%);
+  text-align: center;
+  padding: 4rem 2rem;;
+  transform: translateY(40px) scale(0.9);
+  animation: popupall 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  }
+
+  @keyframes popupall {
+  from {
+  opacity: 0;
+  ransform: translateY(-20px) scale(0.95);
+  }
+  to {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  }
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+}
+
+/* Content Sections */
+.content {
+  background-color: #ffffff;
+  box-shadow: #000000 8px 8px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 0rem;
+  padding: 2rem 0;
+  border-radius: 4px;
+}
+
+.content:hover {
+  border-color: rgba(0,0,0,0.2); /* tampilkan border saat hover */
+}
+.content h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #000000;
+}
+
+.skill-group {
+  margin-bottom: 1.1rem;
+  transform: translateY(40px) scale(0.9);
+  animation: popupall 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  }
+
+  @keyframes popupall {
+  from {
+  opacity: 0;
+  ransform: translateY(-20px) scale(0.95);
+  }
+  to {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  }
+
+}
+
+.skill-group h3 {
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+
+.skill-group ul {
+  list-style: disc inside;
+  
+}
+
+.skill-group li + li {
+  margin-top: 0.3rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  margin-top:0rem;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li + li {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}
+
+/* 3. Wrapper gambar dengan lebar tetap dan rasio 1:1 */
+    .image {
+      flex-shrink: 0;
+      width: 200px;           /* sesuaikan besar gambar */
+    }
+    .image img {
+      width: 100%;
+      aspect-ratio: 1 / 1;    /* paksa rasio 1:1 */
+      object-fit: cover;      /* crop jika perlu */
+      display: block;
+      border-radius: 4px;
+      position: relative; left: 5rem; top: 1rem;
+    }
+
+    .moreskill {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .moreskill a {
+      color: #000000;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border: 2px solid #000000;
+      border-radius: 4px;
+      /* Setup untuk animasi fade */
+      background-color: transparent;
+      transition: background-color 0.3s ease-in-out;
+      }
+
+      .moreskill a:hover {
+      background-color: #000000;
+      color: #ffffff; /* opsional: agar teks tetap terbaca */
+      }

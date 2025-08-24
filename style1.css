@@ -1,0 +1,207 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Styles */
+body {
+  background: #f4f4f4;
+  font-family: sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+    background: #222;
+    color: #fff;
+    padding: 20px 20px;
+    text-align: center;
+    /* Tambahkan animasi transisi gulir ke bawah saat reload */
+    transform: translateY(-50px);
+    opacity: 0;
+    animation: hero-slide-down 1s ease-out forwards;
+}
+
+@keyframes hero-slide-down {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.backbuuton {
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.back-link {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        position: relative;
+        transition: color 0.2s;
+    }
+    .back-link::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background: rgb(255, 255, 255);
+        transition: width 0.3s;
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+    }
+    .back-link:hover::after {
+        width: 100%;
+    }
+
+.hero h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 4px;
+}
+
+.logogambar {
+  position: absolute;
+  top: -1rem;
+left: 107rem;
+}
+
+/* Main Container */
+main {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Setup Section */
+.setup {
+    display: flex;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Pop out animation on reload */
+    transform: scale(0.8);
+    opacity: 0;
+    animation: setup-pop-out 0.8s ease-out forwards;
+}
+
+@keyframes setup-pop-out {
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Content Column */
+.content {
+  flex: 1 1 400px;
+  padding: 40px;
+}
+
+.content h2,
+.content h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #222;
+}
+
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.content h3 {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.content ul {
+  list-style: disc inside;
+  margin-left: 20px;
+}
+
+.content ul li {
+  margin-bottom: 6px;
+}
+
+.thanks {
+  margin-top: 30px;
+  color: #666;
+  font-style: italic;
+}
+
+/* Image Column */
+.image {
+    flex: 1 1 400px;
+    margin-right: 4rem;
+    margin-top: 4rem;
+    /* Pop out animation on reload */
+    transform: scale(0.8);
+    opacity: 0;
+    animation: image-pop-out 0.8s ease-out forwards;
+}
+
+@keyframes image-pop-out {
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.image img {
+    width: 110%;
+    height: 110%;
+    height: auto;
+    display: block;
+    border: solid 2px #000000;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18), 0 4.5px 9px rgb(0, 0, 0);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .setup {
+    flex-direction: column;
+    width: 100%;            /* pastikan lebar penuh */
+    box-sizing: border-box; /* hitung padding dalam lebar */
+    margin: 0;              /* hilangkan margin luar */
+    padding: 0 1rem;        /* padding horizontal jika perlu */
+    overflow-x: hidden;     /* cegah scroll horizontal */
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .image img {
+    width: 140%;
+    height: 140%;
+    height: auto;
+    display: block;
+    border: solid 2px #000000;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18), 0 4.5px 9px rgb(0, 0, 0);
+}
+}

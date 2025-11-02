@@ -302,7 +302,7 @@ html {
     .item img {
       width: 100%;
       aspect-ratio: 1 / 1;      /* Memaksa gambar menjadi persegi */
-      object-fit: cover;        /* Menjaga proporsi dan menutupi area */
+      object-fit: fixed;        /* Menjaga proporsi dan menutupi area */
       display: block;           /* Menghilangkan spasi bawah default */
       border-radius: 5px;
       border: solid 2px #7886C7; /* Border untuk gambar */
@@ -323,6 +323,7 @@ html {
       color: #FAF7F3;
     }
 
+ 
     /* Media Query untuk Mobile */
 @media only screen and (max-width: 600px) {
   .gallery {
@@ -397,6 +398,8 @@ html {
     transition: transform 0.3s ease; /* Animasi halus */
 }
 
+
+
 .logo-item:hover {
   transform: translateY(-10px);   /* Mengambang ke atas */
 }
@@ -406,5 +409,6 @@ html {
   width: 100%;
   height: 100%;
   object-fit: contain;         /* Menjaga proporsi asli logo */
-  display: block;              /* Hilangkan whitespace bawah */
-}
+  display: block;
+
+}              /* Hilangkan whitespace bawah */
